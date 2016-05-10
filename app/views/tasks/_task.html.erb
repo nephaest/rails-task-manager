@@ -1,0 +1,11 @@
+<li class="task-item">
+  <p>
+    <%= link_to fa_icon('trash-o'), task_path(task), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to task.description, task_path(task) %>
+    <% if task.done %>
+      <%= fa_icon 'check' %>
+    <% else %>
+      <%= link_to 'Check', check_task_path(task) %>
+    <% end %>
+  </p>
+</li>

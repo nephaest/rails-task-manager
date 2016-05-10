@@ -1,0 +1,8 @@
+<h2>Your task</h2>
+<p><%= @task.description %></p>
+<p>  was assigned at <%= @task.created_at %></p>
+<% if @task.done %>
+  <p>  and completed at <%= @task.updated_at %></p>
+<% end %>
+
+<%= link_to :back, tasks_path %>
